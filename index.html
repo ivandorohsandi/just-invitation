@@ -1,93 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Yaya n Oji Engagement Invitation</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
 
-  <body>
-    <audio
-      id="bgm"
-      src="lagu.mp3"
-      muted
-      autoplay
-      loop
-      style="display: none"
-    ></audio>
-    <div class="top-flowers">
-      <img src="img/flower-invitation.png" alt="" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yaya n Oji Engagement Invitation</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- AUDIO -->
+  <audio id="bgm" src="lagu.mp3" preload="auto" loop></audio>
+
+  <!-- POPUP -->
+  <div id="popup">
+    <h1>Yaya & Oji</h1>
+    <p>Engagement Invitation</p>
+    <button id="openBtn" style="
+        margin-top:20px;
+        padding:12px 24px;
+        border:none;
+        background:white;
+        color:black;
+        border-radius:8px;
+        font-size:16px;
+        cursor:pointer;
+        font-weight:bold;
+    ">
+      Open Invitation
+    </button>
+  </div>
+
+  <!-- PAGE CONTENT -->
+  <div class="top-flowers">
+    <img src="img/flower-invitation.png" alt="">
+  </div>
+
+  <div class="invitation">
+    <h1>We finally got engaged !!</h1>
+    <div class="couple-illustration">
+      <img src="img/2-people.png" alt="">
+    </div>
+    <div class="names">Yaya &amp; Oji</div>
+
+    <div class="description">
+      After everything we’ve been through, we are thrilled to share that
+      we have finally gotten engaged and can’t wait for the journey ahead
     </div>
 
-    <div class="invitation">
-      <h1>We finally got engaged !!</h1>
+    <div class="event-info">10 AM. 30 Nov 25.</div>
 
-      <div class="couple-illustration">
-        <img src="img/2-people.png" alt="" />
-      </div>
-
-      <div class="names">Yaya &amp; Oji</div>
-
-      <div class="description">
-        After everything we’ve been through, we are thrilled to share that we
-        have finally gotten engaged and can’t wait for the journey ahead
-      </div>
-
-      <div class="event-info">10 AM.30 Nov 25.</div>
-
-      <div class="location">
-        location :
-        <a href="https://maps.app.goo.gl/5KaGpaHgcH3dHfPq9"> yaya's home</a>
-      </div>
+    <div class="location">
+      location :
+      <a href="https://maps.app.goo.gl/5KaGpaHgcH3dHfPq9"> yaya's home</a>
     </div>
+  </div>
 
-    <div class="bottom-flowers">
-      <img src="img/tulip.png" alt="Calla Lily Left" />
-      <img src="img/tulip.png" alt="Calla Lily Right" />
-    </div>
+  <div class="bottom-flowers">
+    <img src="img/tulip.png" alt="Calla Lily Left" />
+    <img src="img/tulip.png" alt="Calla Lily Right" />
+  </div>
 
-    <!-- <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const audio = document.getElementById("bgm");
-            setTimeout(() => {
-                audio.muted = false;
-                audio.volume = 1.0;
-                audio.play().catch(() => {
-                    console.log("Autoplay diblokir browser. Perlu interaksi user.");
-                });
-            }, 1000);
-        });
-    </script> -->
-    <!-- <script>
-      document.addEventListener("click", function playOnce() {
-        const audio = document.getElementById("bgm");
-        audio.muted = false;
-        audio.volume = 1;
 
-        audio
-          .play()
-          .then(() => console.log("Music started"))
-          .catch((err) => console.log("Play blocked:", err));
 
-        // Hapus event listener setelah berhasil
-        document.removeEventListener("click", playOnce);
-      });
-    </script> -->
-    <script>
-document.addEventListener("click", playOnce);
+  <!-- SCRIPT -->
+  <script>
+    document.getElementById("openBtn").addEventListener("click", function () {
+      const audio = document.getElementById("bgm");
+      audio.volume = 1;
+      audio.muted = false;
+      audio.play(); // LANGSUNG PLAY
 
-function playOnce() {
-    const audio = document.getElementById("bgm");
-    audio.muted = false;
-    audio.volume = 1;
+      document.getElementById("popup").style.display = "none";
+    });
+  </script>
 
-    // langsung play TANPA delay
-    audio.play();
+</body>
 
-    // hapus listener agar tidak berulang-ulang
-    document.removeEventListener("click", playOnce);
-}
-</script>
-  </body>
 </html>
