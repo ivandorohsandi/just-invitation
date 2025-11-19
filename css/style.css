@@ -44,7 +44,7 @@ h1 {
     margin-bottom: 140px;
 }
 
-.couple-illustration img{
+.couple-illustration img {
     width: 360px;
 }
 
@@ -78,16 +78,26 @@ h1 {
     font-family: "Chewy", system-ui;
 }
 
-.location a{
+.location a {
     color: white;
 }
 
 /* Bunga kecil di bawah kiri dan kanan */
 .bottom-flowers {
     display: flex;
-    flex-direction:row ;
+    flex-direction: row;
     justify-content: space-between;
     max-width: 620px;
     margin: 0px auto;
     z-index: 1;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .top-flowers {
+        max-width: 420px;
+    }
 }
