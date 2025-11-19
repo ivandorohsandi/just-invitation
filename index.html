@@ -9,6 +9,10 @@
 </head>
 
 <body>
+  <div id="start" style="cursor:pointer;">
+  Klik untuk masuk
+</div>
+
   <audio id="bgm" src="lagu.mp3" muted autoplay loop style="display: none"></audio>
   <div class="top-flowers">
     <img src="img/flower-invitation.png" alt="">
@@ -88,13 +92,9 @@ window.addEventListener("load", async () => {
 
 
 <script>
-let started = false;
-
-window.addEventListener("scroll", () => {
-    if (!started) {
-        started = true;
-        document.getElementById("bgm").play();
-    }
+document.getElementById("start").addEventListener("click", () => {
+    document.getElementById("bgm").play();
+    document.getElementById("start").style.display = "none";
 });
 </script>
 
