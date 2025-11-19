@@ -94,6 +94,14 @@ h1 {
 
 /* RESPONSIVE */
 @media screen and (max-width: 768px) {
+    body{
+        overflow-x: hidden;
+    }
+
+    .top-flowers img{
+        width: 400px;
+    }
+
     h1 {
         font-size: 2.4rem;
     }
