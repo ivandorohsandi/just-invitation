@@ -1,49 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Yaya n Oji Engagement Invitation</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Yaya n Oji Engagement Invitation</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body onclick="playMusic()">
-
-  <!-- <audio id="bgm" src="lagu.mp3" muted autoplay loop style="display: none"></audio> -->
-  <audio id="bgm" src="https://on.soundcloud.com/S6eBwukbkAcMwUw7hR" muted autoplay loop style="display: none"></audio>
-  <div class="top-flowers">
-    <img src="img/flower-invitation.png" alt="">
-  </div>
-
-  <div class="invitation">
-    <h1>We finally got engaged !!</h1>
-
-    <div class="couple-illustration">
-      <img src="img/2-people.png" alt="">
+  <body>
+    <audio
+      id="bgm"
+      src="lagu.mp3"
+      muted
+      autoplay
+      loop
+      style="display: none"
+    ></audio>
+    <div class="top-flowers">
+      <img src="img/flower-invitation.png" alt="" />
     </div>
 
-    <div class="names">Yaya &amp; Oji</div>
+    <div class="invitation">
+      <h1>We finally got engaged !!</h1>
 
-    <div class="description">
-      After everything we’ve been through, we are thrilled to share that we have finally gotten engaged and can’t wait
-      for the journey ahead
+      <div class="couple-illustration">
+        <img src="img/2-people.png" alt="" />
+      </div>
+
+      <div class="names">Yaya &amp; Oji</div>
+
+      <div class="description">
+        After everything we’ve been through, we are thrilled to share that we
+        have finally gotten engaged and can’t wait for the journey ahead
+      </div>
+
+      <div class="event-info">10 AM.30 Nov 25.</div>
+
+      <div class="location">
+        location :
+        <a href="https://maps.app.goo.gl/5KaGpaHgcH3dHfPq9"> yaya's home</a>
+      </div>
     </div>
 
-    <div class="event-info">10 AM.30 Nov 25.</div>
-
-    <div class="location">location :
-      <a href="https://maps.app.goo.gl/5KaGpaHgcH3dHfPq9"> yaya's home</a>
+    <div class="bottom-flowers">
+      <img src="img/tulip.png" alt="Calla Lily Left" />
+      <img src="img/tulip.png" alt="Calla Lily Right" />
     </div>
 
-  </div>
-
-  <div class="bottom-flowers">
-    <img src="img/tulip.png" alt="Calla Lily Left" />
-    <img src="img/tulip.png" alt="Calla Lily Right" />
-  </div>
-
-  <!-- <script>
+    <!-- <script>
         document.addEventListener("DOMContentLoaded", function () {
             const audio = document.getElementById("bgm");
             setTimeout(() => {
@@ -55,55 +59,20 @@
             }, 1000);
         });
     </script> -->
-
-        <!-- <script>
+    <script>
+      document.addEventListener("click", function playOnce() {
         const audio = document.getElementById("bgm");
-        
-        // Tunggu audio siap, lalu unmute dan play setelah delay singkat
-        audio.addEventListener("canplaythrough", () => {
-            setTimeout(() => {
-                audio.muted = false;
-                audio.play().catch(error => {
-                    console.log("Autoplay gagal: ", error); // Untuk debugging
-                });
-            }, 1000); // Delay 1 detik (sesuaikan jika perlu)
-        });
-    </script> -->
-
-<!-- <script>
-window.addEventListener("load", async () => {
-    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-    const audio = new Audio("lagu.mp3");
-    audio.loop = true;
-
-    const track = audioContext.createMediaElementSource(audio);
-    track.connect(audioContext.destination);
-
-    try {
-        await audio.play();
-        console.log("Berhasil autoplay");
-    } catch (e) {
-        console.log("Autoplay diblokir, aktifkan manual");
-    }
-});
-</script> -->
-
-
-<script>
-    function playMusic() {
-        const audio = document.getElementById('bgm');
+        audio.muted = false;
         audio.volume = 1;
-        audio.play().then(() => {
-            console.log("Audio played.");
-        }).catch(err => {
-            console.log("Error:", err);
-        });
 
-        document.body.onclick = null;
-    }
+        audio
+          .play()
+          .then(() => console.log("Music started"))
+          .catch((err) => console.log("Play blocked:", err));
+
+        // Hapus event listener setelah berhasil
+        document.removeEventListener("click", playOnce);
+      });
     </script>
-
-
-</body>
-
+  </body>
 </html>
