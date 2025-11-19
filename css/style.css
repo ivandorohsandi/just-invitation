@@ -121,6 +121,10 @@ h1 {
         overflow-x: hidden;
     }
 
+    .couple-illustration img {
+        width: 300px;
+    }
+
     .top-flowers img{
         width: 380px;
     }
