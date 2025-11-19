@@ -1,0 +1,32 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>yaya n oji</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="hero-image">
+        <img src="Just_Invitation.jpg" alt="">
+    </div>
+    <audio id="bgm" src="lagu.mp3" muted autoplay loop style="display: none"></audio>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const audio = document.getElementById("bgm");
+            setTimeout(() => {
+                audio.muted = false;
+                audio.volume = 1.0;
+                audio.play().catch(() => {
+                    console.log("Autoplay diblokir browser. Perlu interaksi user.");
+                });
+            }, 1000);
+        });
+    </script>
+</body>
+
+</html> -->

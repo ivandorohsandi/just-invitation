@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yaya n Oji Engagement Invitation</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <audio id="bgm" src="lagu.mp3" muted autoplay loop style="display: none"></audio>
+  <div class="top-flowers">
+    <img src="img/flower-invitation.png" alt="">
+  </div>
+
+  <div class="invitation">
+    <h1>We finally got engaged !!</h1>
+
+    <div class="couple-illustration">
+      <img src="img/2-people.png" alt="">
+    </div>
+
+    <div class="names">Yaya &amp; Oji</div>
+
+    <div class="description">
+      After everything we’ve been through, we are thrilled to share that we have finally gotten engaged and can’t wait
+      for the journey ahead
+    </div>
+
+    <div class="event-info">10 AM.30 Nov 25.</div>
+
+    <div class="location">location :
+      <a href="https://maps.app.goo.gl/5KaGpaHgcH3dHfPq9"> yaya's home</a>
+    </div>
+
+  </div>
+
+  <div class="bottom-flowers">
+    <img src="img/tulip.png" alt="Calla Lily Left" />
+    <img src="img/tulip.png" alt="Calla Lily Right" />
+  </div>
+
+  <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const audio = document.getElementById("bgm");
+            setTimeout(() => {
+                audio.muted = false;
+                audio.volume = 1.0;
+                audio.play().catch(() => {
+                    console.log("Autoplay diblokir browser. Perlu interaksi user.");
+                });
+            }, 1000);
+        });
+    </script>
+
+</body>
+
+</html>
