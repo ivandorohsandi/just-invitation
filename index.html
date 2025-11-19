@@ -59,7 +59,7 @@
             }, 1000);
         });
     </script> -->
-    <script>
+    <!-- <script>
       document.addEventListener("click", function playOnce() {
         const audio = document.getElementById("bgm");
         audio.muted = false;
@@ -73,6 +73,21 @@
         // Hapus event listener setelah berhasil
         document.removeEventListener("click", playOnce);
       });
-    </script>
+    </script> -->
+    <script>
+document.addEventListener("click", playOnce);
+
+function playOnce() {
+    const audio = document.getElementById("bgm");
+    audio.muted = false;
+    audio.volume = 1;
+
+    // langsung play TANPA delay
+    audio.play();
+
+    // hapus listener agar tidak berulang-ulang
+    document.removeEventListener("click", playOnce);
+}
+</script>
   </body>
 </html>
