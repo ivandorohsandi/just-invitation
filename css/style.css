@@ -92,12 +92,43 @@ h1 {
     z-index: 1;
 }
 
+/* RESPONSIVE */
 @media screen and (max-width: 768px) {
-    body {
-        overflow-x: hidden;
+    h1 {
+        font-size: 2.4rem;
     }
 
-    .top-flowers {
-        max-width: 20px;
+    .couple-illustration {
+        margin-bottom: 70px;
+    }
+
+    .names {
+        font-size: 1.8rem;
+    }
+
+    .event-info {
+        font-size: 1.1rem;
+    }
+
+    .location {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .names {
+        font-size: 1.6rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
+
+    .bottom-flowers img {
+        width: 35%;
     }
 }
