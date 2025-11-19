@@ -41,7 +41,7 @@
     <img src="img/tulip.png" alt="Calla Lily Right" />
   </div>
 
-  <script>
+  <!-- <script>
         document.addEventListener("DOMContentLoaded", function () {
             const audio = document.getElementById("bgm");
             setTimeout(() => {
@@ -51,6 +51,20 @@
                     console.log("Autoplay diblokir browser. Perlu interaksi user.");
                 });
             }, 1000);
+        });
+    </script> -->
+
+        <script>
+        const audio = document.getElementById("bgm");
+        
+        // Tunggu audio siap, lalu unmute dan play setelah delay singkat
+        audio.addEventListener("canplaythrough", () => {
+            setTimeout(() => {
+                audio.muted = false;
+                audio.play().catch(error => {
+                    console.log("Autoplay gagal: ", error); // Untuk debugging
+                });
+            }, 1000); // Delay 1 detik (sesuaikan jika perlu)
         });
     </script>
 
