@@ -8,10 +8,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-  <div id="start" style="cursor:pointer;">
-  Klik untuk masuk
-</div>
+<body onclick="playMusic()">
 
   <audio id="bgm" src="lagu.mp3" muted autoplay loop style="display: none"></audio>
   <div class="top-flowers">
@@ -92,18 +89,13 @@ window.addEventListener("load", async () => {
 
 
 <script>
-let started = false;
-
-window.addEventListener("scroll", () => {
-    if (!started) {
-        started = true;
-        const audio = document.getElementById("bgm");
-
-        audio.play()
-            .then(() => console.log("Music played on scroll"))
-            .catch(err => console.log("Autoplay blocked:", err));
-    }
-});
+function playMusic() {
+    const audio = document.getElementById("bgm");
+    audio.play();
+    
+    // Hanya butuh 1 klik → hapus event klik berikutnya
+    document.body.onclick = null;
+}
 </script>
 
 
