@@ -171,4 +171,7 @@ h1 {
     .bottom-flowers img {
         width: 35%;
     }
+    #popup{
+        width: 200px
+    }
 }
