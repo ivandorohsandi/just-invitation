@@ -68,7 +68,7 @@
         });
     </script> -->
 
-<script>
+<!-- <script>
 window.addEventListener("load", async () => {
     const audioContext = new (window.AudioContext || window.webkitAudioContext)();
     const audio = new Audio("lagu.mp3");
@@ -82,6 +82,18 @@ window.addEventListener("load", async () => {
         console.log("Berhasil autoplay");
     } catch (e) {
         console.log("Autoplay diblokir, aktifkan manual");
+    }
+});
+</script> -->
+
+
+<script>
+let started = false;
+
+window.addEventListener("scroll", () => {
+    if (!started) {
+        started = true;
+        document.getElementById("bgm").play();
     }
 });
 </script>
